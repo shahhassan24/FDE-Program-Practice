@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Noor Foods</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Noor Foods</h1>
+      <p>Fresh groceries, delivered.</p>
+      <p><a href="staff.html" style="color: white">Staff page</a></p>
+    </header>
+
+    <main>
+      <h2>Products</h2>
+
+      <form id="search-form" class="toolbar">
+        <label>
+          Search
+          <input type="search" name="search" placeholder="rice, oil, masala...">
+        </label>
+        <label>
+          Category
+          <select name="category_id">
+            <option value="">All categories</option>
+          </select>
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" name="in_stock" value="true">
+          In stock only
+        </label>
+        <button type="submit">Search</button>
+      </form>
+
+      <p id="message"></p>
+      <ul id="product-list"></ul>
+
+      <section>
+        <h2>Place an order</h2>
+        <form id="order-form" class="toolbar">
+          <label>
+            Customer ID
+            <input type="number" name="customer_id" min="1" required>
+          </label>
+          <label>
+            Product ID
+            <input type="number" name="product_id" min="1" required>
+          </label>
+          <label>
+            Quantity
+            <input type="number" name="quantity" min="1" max="50" value="1" required>
+          </label>
+          <button type="submit">Place order</button>
+        </form>
+        <p id="order-message"></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Noor Foods · Groceries delivered to your door</p>
+    </footer>
+  </body>
+</html>
